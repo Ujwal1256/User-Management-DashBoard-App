@@ -164,23 +164,23 @@ const Dashboard = () => {
   const paginatedUsers = sortedUsers.slice(startIndex, endIndex);
 
   return (
-    <div className="max-w-7xl mx-auto p-5">
-      <div className="flex justify-between items-center mb-5">
-        <h1 className="text-3xl font-bold mb-5">User Management Dashboard</h1>
+    <div className="max-w-7xl mx-auto px-4 py-5">
+      <div className="flex flex-col gap-4 mb-5">
+        <h1 className="text-3xl md:text-3xl font-bold">User Management Dashboard</h1>
 
-        <div className="flex flex-wrap gap-3 mb-5">
-          <div className="mb-5">
+        <div className="flex flex-wrap gap-3 items-center mb-5">
+          <div className="mb-10">
             <input
               type="text"
               placeholder="Search by name, email or department..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full border p-2 rounded"
+              className="w-full sm:w-72 border p-2 rounded"
             />
           </div>
           <button
             onClick={() => setShowFilters(true)}
-            className="bg-gray-700 text-white px-4 py-2 rounded"
+            className="bg-gray-700 text-white p-5 m-3 rounded"
           >
             Filters
           </button>
@@ -226,7 +226,7 @@ const Dashboard = () => {
           </div>
           <button
             onClick={openAddForm}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded"
           >
             Add User
           </button>
@@ -241,8 +241,8 @@ const Dashboard = () => {
       ) : (
         <div className="text-center py-10">No users found</div>
       )}
-
-      <div className="flex justify-center gap-2 mt-5">
+      <div className="flex flex-wrap justify-center gap-2 mt-5">
+        {" "}
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
@@ -250,11 +250,9 @@ const Dashboard = () => {
         >
           Previous
         </button>
-
         <span className="px-4 py-2">
           Page {currentPage} of {totalPages}
         </span>
-
         <button
           onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage === totalPages}
@@ -263,7 +261,6 @@ const Dashboard = () => {
           Next
         </button>
       </div>
-
       {showFilters && (
         <div className="fixed inset-0 bg-black/50 flex justify-center items-center">
           <div className="bg-white p-6 rounded-lg w-96">
@@ -346,7 +343,6 @@ const Dashboard = () => {
           </div>
         </div>
       )}
-
       <UserForm
         show={showForm}
         close={closeForm}

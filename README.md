@@ -6,26 +6,26 @@ A responsive User Management Dashboard built using React, Axios, Tailwind CSS, a
 
 ## Features
 
-- View all users from API
-- Add new users
-- Edit existing users
-- Delete users
-- Search users by name, email, or department
-- Sort users by ID, First Name, Last Name, and Department
-- Filter users using a dedicated filter popup
-- Pagination support (10, 25, 50, 100 records per page)
-- Form validation
-- Error handling
-- Responsive design
+* View all users from API
+* Add new users
+* Edit existing users
+* Delete users
+* Search users by name, email, or department
+* Sort users by ID, First Name, Last Name, and Department
+* Filter users using a dedicated filter popup
+* Pagination support (10, 25, 50, 100 records per page)
+* Form validation
+* Error handling
+* Responsive design
 
 ---
 
 ## Tech Stack
 
-- React.js
-- Axios
-- Tailwind CSS
-- JSONPlaceholder API
+* React.js
+* Axios
+* Tailwind CSS
+* JSONPlaceholder API
 
 ---
 
@@ -35,11 +35,8 @@ A responsive User Management Dashboard built using React, Axios, Tailwind CSS, a
 src/
 │
 ├── components/
-│   ├── FilterModal.jsx
-│   ├── Pagination.jsx
-│   ├── SearchBar.jsx
-│   ├── UserForm.jsx
-│   └── UserTable.jsx
+│   ├── UserTable.jsx
+│   └── UserForm.jsx
 │
 ├── pages/
 │   └── Dashboard.jsx
@@ -110,18 +107,19 @@ DELETE /users/:id
 
 ## Assumptions Made
 
-- Each user contains:
-  - ID
-  - First Name
-  - Last Name
-  - Email
-  - Department
+* Each user contains:
 
-- Since JSONPlaceholder returns a single `name` field, it is split into First Name and Last Name for display purposes.
+  * ID
+  * First Name
+  * Last Name
+  * Email
+  * Department
 
-- Department information is derived from the user's company name.
+* Since JSONPlaceholder returns a single `name` field, it is split into First Name and Last Name for display purposes.
 
-- Add, Edit, and Delete operations are maintained locally because JSONPlaceholder does not persist changes.
+* Department information is derived from the user's company name.
+
+* Add, Edit, and Delete operations are maintained locally because JSONPlaceholder does not persist changes.
 
 ---
 
@@ -141,11 +139,11 @@ After receiving a successful API response, the local React state was updated man
 
 The application includes:
 
-- CRUD operations
-- Search
-- Sorting
-- Filtering
-- Pagination
+* CRUD operations
+* Search
+* Sorting
+* Filtering
+* Pagination
 
 Combining these features while keeping the code organized required careful state management.
 
@@ -215,10 +213,10 @@ Searching and filtering could be performed through API requests to improve perfo
 
 Replace browser alerts with modern toast notifications for:
 
-- Add Success
-- Update Success
-- Delete Success
-- Error Messages
+* Add Success
+* Update Success
+* Delete Success
+* Error Messages
 
 ### 4. Custom Confirmation Modal
 
@@ -232,15 +230,15 @@ Provide visual feedback while API requests are in progress.
 
 Add automated tests using:
 
-- React Testing Library
-- Jest
+* React Testing Library
+* Jest
 
 ### 7. State Management Optimization
 
 For larger applications, introduce:
 
-- React Context API
-- Redux Toolkit
+* React Context API
+* Redux Toolkit
 
 ### 8. API Caching and Synchronization
 
@@ -250,13 +248,13 @@ Use React Query (TanStack Query) for caching, background refetching, and improve
 
 ## Future Enhancements
 
-- Authentication and Authorization
-- Dark Mode
-- Export Users to CSV/Excel
-- User Profile Pages
-- Advanced Filtering
-- Bulk Delete Operations
-- Responsive Mobile Navigation
+* Authentication and Authorization
+* Dark Mode
+* Export Users to CSV/Excel
+* User Profile Pages
+* Advanced Filtering
+* Bulk Delete Operations
+* Responsive Mobile Navigation
 
 ---
 
